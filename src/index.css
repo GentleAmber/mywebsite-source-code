@@ -1,0 +1,76 @@
+/* Global */
+:root {
+  color-scheme: light dark;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+a {
+  font-weight: 500;
+  color: #ff3f95;
+  text-decoration: inherit;
+}
+a:hover {
+  color: rgba(255, 255, 255, 0.87);
+}
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+body:not(.applayout) {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* 
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #ff3f95;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #251a38;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #ff3f95;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+
+

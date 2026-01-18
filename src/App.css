@@ -1,0 +1,50 @@
+/* Cover */
+#cover-bg h1 {
+  font-size: 40px;
+  color: white;
+  opacity: 0%;
+  animation: fadeIn 1.5s ease-in forwards;
+  margin: 0 0 5rem 0;
+}
+#cover-bg * {
+  font-family: "Bowlby One SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.cover-link {
+  font-size: 80px;
+  display: block;
+  transition: 0.2s ease-out;
+}
+.cover-link:hover {
+  transform: scale(1.1);
+  color: white;
+}
+/* Route-based body centering when on cover route */
+body:not(.applayout) #root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+/* AppLayout */
+/* Narbar */
+.app-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.app-nav .navlink {
+  
+}
