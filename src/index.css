@@ -14,8 +14,11 @@
 }
 #root {
   margin: 0;
-  padding: 1rem;
+  padding: 16px;
   text-align: center;
+}
+p {
+  margin: 0.5em 0;
 }
 a {
   font-weight: 500;
@@ -27,9 +30,10 @@ a:hover {
 }
 body {
   margin: 0;
-  width: 100%;
+  max-width: 100%;
   min-height: 100vh;
 }
+/* Center content on the cover page */
 body:not(.applayout) {
   overflow: hidden;
   display: flex;
@@ -39,25 +43,6 @@ body:not(.applayout) {
 
 
 /* 
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #ff3f95;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 @media (prefers-color-scheme: light) {
   :root {

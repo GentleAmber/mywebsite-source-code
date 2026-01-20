@@ -8,6 +8,19 @@ import AppLayout from './layouts/AppLayout'
 import Cover from './pages/Cover'
 
 function App() {
+  /* Switch layout based on route (Cover or AppLayout) */
+  const location = useLocation()
+
+  useEffect(() => {
+    // const root = document.getElementById('root');
+    const body = document.body;
+
+    if (location.pathname === '/' || location.pathname === '') {
+      body.classList.remove('applayout')
+    } else {
+      body.classList.add('applayout')
+    }
+  }, [location.pathname])
 
   return (
     <Routes>

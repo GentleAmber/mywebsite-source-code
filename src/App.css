@@ -1,12 +1,12 @@
-/* Cover */
-#cover-bg h1 {
-  font-size: 40px;
+/* 1 Cover */
+.cover-bg h1 {
+  font-size: 36px;
   color: white;
   opacity: 0%;
   animation: fadeIn 1.5s ease-in forwards;
   margin: 0 0 5rem 0;
 }
-#cover-bg * {
+.cover-bg * {
   font-family: "Bowlby One SC", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -20,12 +20,12 @@
 	}
 }
 .cover-link {
-  font-size: 80px;
+  font-size: 70px;
   display: block;
   transition: 0.2s ease-out;
 }
 .cover-link:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   color: white;
 }
 /* Route-based body centering when on cover route */
@@ -43,8 +43,25 @@ body:not(.applayout) #root {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 1.5px rgb(84, 83, 83);
+  font-size: 1.5rem;
 }
-.app-nav .navlink {
-  
+#nav-home {
+  font-family: "Bowlby One SC", sans-serif;
+  font-size: 1.05em;
+}
+
+/* AboutMe */
+.showcase {
+  display: flex;
+  gap: 2rem;
+  font-size: 1rem;
+  text-align: start;
+}
+.showcase-unit-title {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
 }

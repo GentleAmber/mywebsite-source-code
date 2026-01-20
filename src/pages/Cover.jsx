@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 function Cover() {
   return (
-    <div className='bg' id='cover-bg'>
+    <div className='cover-bg'>
       <h1>Welcome to Amber's website</h1>
       <Link to='aboutme' className='cover-link'>About Me</Link>
       <Link to='works' className='cover-link'>Works</Link>
