@@ -40,16 +40,24 @@ body:not(.applayout) #root {
 /* AppLayout */
 /* Narbar */
 .app-nav {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  padding-bottom: 0.5rem;
+  padding: 16px;
   border-bottom: solid 1.5px rgb(84, 83, 83);
   font-size: 1.5rem;
+  background-color: #242424;
 }
 #nav-home {
   font-family: "Bowlby One SC", sans-serif;
   font-size: 1.05em;
+}
+/* To keep navbar stay on top */
+.applayout-bg {
+  margin-top: 4rem;
 }
 
 /* AboutMe */

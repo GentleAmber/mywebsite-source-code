@@ -1,8 +1,8 @@
 function WorksCoding() {
   return (
-    <>
-      <p>Works-coding</p>
-    </>
+    <div className='works coding'>
+      works coding
+    </div>
   )
 }
 
