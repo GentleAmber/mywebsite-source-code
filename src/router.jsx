@@ -1,55 +1,81 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom"
 
-import AppLayout from "./layouts/AppLayout";
-import WorksLayout from "./layouts/WorksLayout";
+import RootLayout from "./layouts/RootLayout"
+import AppLayout from "./layouts/AppLayout"
 
-import Cover from "./pages/Cover";
-import AboutMe from "./pages/AboutMe";
-import Interests from "./pages/Interests";
-import WorksCoding from "./pages/WorksCoding";
-import WorksIllustrations from "./pages/WorksIllustrations";
-import IllustrationProject from "./pages/IllustrationProject";
-import AppErrorPage from "./pages/AppErrorPage";
+import Cover from "./pages/Cover"
+import AboutMe from "./pages/AboutMe"
+import Interests from "./pages/Interests"
+import Coding from "./pages/WorksCoding"
+import Illustrations from "./pages/WorksIllustrations"
+import IllustrationProject from "./pages/IllustrationProject"
+import CodingProject from "./pages/CodingProject"
+import AppErrorPage from "./pages/AppErrorPage"
+import CodingList from "./pages/CodingList"
+import IlluList from "./pages/IlluList"
 
-import projectLoader from "./pages/project.loader";
+import illuProjectLoader from "./pages/illuProject.loader"
 
 const router = createBrowserRouter([
   {
-    index: true,
-    element: <Cover />,
-    errorElement: <AppErrorPage />
-  },
-  {
-    element: <AppLayout />, 
+    element: <RootLayout />,
     errorElement: <AppErrorPage />,
     children: [
-      { path: "aboutme", element: <AboutMe /> },
-      { path: "interests", element: <Interests /> },
       {
-        path: "works",
-        element: <WorksLayout />,
+        index: true,
+        element: <Cover />,
+      },
+      {
+        element: <AppLayout />, 
         children: [
-          { index: true, element: <WorksCoding /> },
+          { 
+            path: "aboutme", 
+            element: <AboutMe /> 
+          },
+          { 
+            path: "interests", 
+            element: <Interests /> 
+          },
+          { 
+            path: "coding",
+            element: <Coding />,
+            children: [
+              {
+                index: true,
+                element: <CodingList />
+              },
+              {
+                path: ":name",
+                element: <CodingProject />,
+                loader: illuProjectLoader,// Needs to change to coding loader
+                errorElement: <AppErrorPage />
+              }
+            ]
+          },
           {
             path: "illustrations",
-            element: <WorksIllustrations />,
+            element: <Illustrations />,
             children: [
+              {
+                index: true,
+                element: <IlluList />
+              },
               {
                 path: ":name",
                 element: <IllustrationProject />,
-                loader: projectLoader,
-                errorElement: <AppErrorPage />,
+                loader: illuProjectLoader,
+                errorElement: <AppErrorPage />
               },
             ],
           },
+          {
+            path: "*",
+            element: <AppErrorPage />,
+          }
         ],
       },
-      {
-        path: "*",
-        element: <AppErrorPage />,
-      }
-    ],
-  },
-]);
+    ]
+  }
+])
 
-export default router;
+export default router

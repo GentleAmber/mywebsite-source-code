@@ -1,6 +1,6 @@
 import projects from "../data/illustrationProjects";
 
-async function projectLoader({ params }) {
+async function illuProjectLoader({ params }) {
   const { name } = params;
 
   const projectNames = fetchData(projects);
@@ -18,4 +18,4 @@ function fetchData(projects) {
   );
 }
 
-export default projectLoader
+export default illuProjectLoader

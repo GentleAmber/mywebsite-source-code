@@ -1,7 +1,13 @@
-/* 1 Cover */
+/* Global var */
+body {
+  --navbar-font-size: 1.5rem;
+  --navbar-home-font-size: 1.05em;
+}
+
+/* Cover */
 .cover-bg h1 {
   font-size: 36px;
-  color: white;
+  color: var(--color-foreground);
   opacity: 0%;
   animation: fadeIn 1.5s ease-in forwards;
   margin: 0 0 5rem 0;
@@ -26,9 +32,14 @@
 }
 .cover-link:hover {
   transform: scale(1.05);
-  color: white;
 }
 /* Route-based body centering when on cover route */
+body:not(.applayout) {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 body:not(.applayout) #root {
   display: flex;
   align-items: center;
@@ -36,28 +47,64 @@ body:not(.applayout) #root {
   flex-direction: column;
 }
 
-
 /* AppLayout */
 /* Narbar */
 .app-nav {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
+  --button-padding: 0.2em;
+
+  z-index: 40;
+  position: sticky;
+  top: 0;
+  width: calc(100% - var(--padding-root) * 2);
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
-  padding: 16px;
-  border-bottom: solid 1.5px rgb(84, 83, 83);
-  font-size: 1.5rem;
-  background-color: #242424;
+  align-items: center;
+  padding: var(--padding-root);
+  border-bottom: solid 1.5px var(--color-border);
+  font-size: var(--navbar-font-size);
+  background-color: var(--color-background);
+
+}
+#nav-home, .dark-mode-toggle a, .navlink {
+  padding: var(--button-padding);
 }
 #nav-home {
   font-family: "Bowlby One SC", sans-serif;
-  font-size: 1.05em;
+  font-size: var(--navbar-home-font-size);
+  transition: 0.05s;
 }
-/* To keep navbar stay on top */
-.applayout-bg {
-  margin-top: 4rem;
+#nav-home:hover {
+  transform: scale(1.05);
+}
+.app-subnav {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+}
+.dark-mode-toggle a {
+  cursor: pointer;
+  transition: 0.1s;
+  border-radius: 50%;
+}
+.dark-mode-toggle a:hover {
+  background-color: var(--color-hover-background);
+}
+.navlink {
+  transition: 0.1s;
+  border-radius: 0.5em;
+}
+.navlink.active, .navlink:hover {
+  background-color: var(--color-hover-background);
+}
+.navlink.active {
+  color: var(--color-foreground);
+}
+.app-bg {
+  margin-top: 1.25rem;
 }
 
 /* AboutMe */

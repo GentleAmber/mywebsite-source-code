@@ -1,7 +1,9 @@
+import { Outlet } from 'react-router-dom'
+
 function WorksCoding() {
   return (
-    <div className='works coding'>
-      works coding
+    <div className='coding works app-bg'>
+      <Outlet />
     </div>
   )
 }
