@@ -1,6 +1,5 @@
 import ShowcaseColumn from './ShowcaseColumn'
 
-
 function Showcase({allExperiences}) {
   return (
     <div className='showcase' >

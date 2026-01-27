@@ -1,17 +1,20 @@
-import { DarkModeToggle } from './ModeToggle'
-import { NavLink } from 'react-router-dom'
+import DarkModeToggle from './ModeToggle'
+import { NavLink, useOutletContext } from 'react-router-dom'
 
 
 function AppNav() {
+  
+  const { isDark, setIsDark } = useOutletContext();
+
   return (
     <nav className='app-nav'>
       <NavLink to='/' id='nav-home'>Amber Wang</NavLink>
       <div className='app-subnav'>
-        <NavLink to='aboutme' className='navlink'>About Me</NavLink>
-        <NavLink to='coding' className='navlink'>Coding</NavLink>
-        <NavLink to='illustrations' className='navlink'>Illustrations</NavLink>
-        <NavLink to='interests' className='navlink'>Interests</NavLink>
-        <DarkModeToggle />
+        <NavLink to='aboutme' className='app-navlink'>About Me</NavLink>
+        <NavLink to='coding' className='app-navlink'>Coding</NavLink>
+        <NavLink to='illustrations' className='app-navlink'>Illustrations</NavLink>
+        <NavLink to='interests' className='app-navlink'>Interests</NavLink>
+        <DarkModeToggle isDark={isDark} setIsDark={setIsDark}/>
       </div>
     </nav>
   )

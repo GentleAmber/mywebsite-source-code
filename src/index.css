@@ -1,5 +1,6 @@
 :root {
-  --padding-root: 16px;
+  --padding-root-width: 16px;
+  --padding-root-height: 1rem;
 
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
@@ -11,12 +12,21 @@
 }
 #root {
   margin: 0;
-  /* No padding at the top for sticky nav bar to display properly */
-  padding: 0 var(--padding-root) var(--padding-root) var(--padding-root); 
+  /* padding-top: 0 for sticky nav bar to display properly */
+  padding: 0 var(--padding-root-width) var(--padding-root-width) var(--padding-root-width); 
   text-align: center;
 }
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.4rem;
+}
 p {
-  margin: 0.5em 0;
+  font-size: 1rem;
+}
+h1,h2,p {
+  margin: 0.4em 0;
 }
 a {
   font-weight: 500;
@@ -24,12 +34,12 @@ a {
   text-decoration: inherit;
   user-select: none;
 }
-a:hover {
+a:not(.link-no-hover):hover {
   color: var(--color-foreground);
 }
 body {
   --color-foreground: #251a38;
-  --color-background: rgb(242, 249, 252);
+  --color-background: rgb(255, 255, 255);
   --color-artistic: #ee2a9c;
   --color-border: rgb(32, 32, 32);
   --color-hover-background: #bfbec2;

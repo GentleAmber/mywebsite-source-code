@@ -3,19 +3,15 @@ import projects from "../data/illustrationProjects";
 async function illuProjectLoader({ params }) {
   const { name } = params;
 
-  const projectNames = fetchData(projects);
+  const project = projects.find(
+    p => p.slug === name
+  );
 
-  if (!projectNames.includes(name)) {
+  if (!project) {
     throw new Response("Project not found", { status: 404 });
   }
 
-  return { name };
-}
-
-function fetchData(projects) {
-  return projects.map(p =>
-    p.title.replace(/\s+/g, "-").toLowerCase()
-  );
+  return project;
 }
 
 export default illuProjectLoader
