@@ -14,6 +14,7 @@ function CodingList() {
           slug={p.slug}
           title={p.title}
           images={p.images}
+          headImgNum={p.headImgNum}
           cate={p.category}
           skills={p.skills}
           techStack={p.techStack}

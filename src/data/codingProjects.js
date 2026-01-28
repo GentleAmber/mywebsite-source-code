@@ -13,7 +13,7 @@ import imsystem_client_6 from './../assets/coding-imsystem/imsystem_client_6.png
 import indexArt from './../assets/web-public-api/public-api-index.png'
 import searchArt from './../assets/web-public-api/public-api-search.png'
 
-// By default, the first 1-3 images in array images will be used in thumbnail. Relevant 
+// By default, images in array images will be used in thumbnail according to their index. Relevant 
 // logic is written in components/ImageBox.jsx
 const projects = [
   {
@@ -23,10 +23,10 @@ const projects = [
     category: ['2D Game Development'],
     skills: ['OOP design', 'Graphics', 'Multithreaded Programming', 'File I/O'],
     techStack: ['Java', 'JPanel'],
-    thumbnailDes: '',
+    thumbnailDes: 'A demo tank game where the player controls a tank to fight multiple enemy tanks. Supports save and load. Modules: Player Control; Enemy AI (randomly moves and shoots); Collision Detection; Rendering (with JPanel); Game State Management; Animation; Event Handling; Thread Management. ',
     fullDes: '',
-    images: [game, gameLog, structureInfo_1, structureInfo_2]
-
+    images: [game, gameLog, structureInfo_1, structureInfo_2],
+    headImgNum: 2
   },
   {
     id: 2,
@@ -40,7 +40,8 @@ const projects = [
     images: [
       imsystem_1, imsystem_2, imsystem_client_1, imsystem_client_2, imsystem_client_3,
       imsystem_client_4, imsystem_client_5, imsystem_client_6
-    ]
+    ],
+    headImgNum: 3
   },
   {
     id: 3,
@@ -51,7 +52,8 @@ const projects = [
     techStack: ['Node.js', 'Express.js', 'EJS'],
     thumbnailDes: '',
     fullDes: '',
-    images: [indexArt, searchArt]
+    images: [indexArt, searchArt],
+    headImgNum: 2
   },
   {
     id: 4,
@@ -62,7 +64,8 @@ const projects = [
     techStack: ['Next.js', 'React.js', 'postgreSQL'],
     thumbnailDes: '',
     fullDes: '',
-    images: []
+    images: [],
+    headImgNum: 0
   }
 ]
 

@@ -13,7 +13,7 @@
 #root {
   margin: 0;
   /* padding-top: 0 for sticky nav bar to display properly */
-  padding: 0 var(--padding-root-width) var(--padding-root-width) var(--padding-root-width); 
+  /* padding: 0 var(--padding-root-width) var(--padding-root-width) var(--padding-root-width);  */
   text-align: center;
 }
 h1 {
@@ -43,6 +43,7 @@ body {
   --color-artistic: #ee2a9c;
   --color-border: rgb(32, 32, 32);
   --color-hover-background: #bfbec2;
+  /* --color-nav-and-footer: #85c2df; */
 
   margin: 0;
   max-width: 100%;

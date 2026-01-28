@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import ImageBox from './ImageBox'
 
 // value for dir: image on the left(0), on the right(1)
-function CodingProjectThumbnail({ dir=0, slug, title, images, cate, skills, techStack, thumbnailDes }) {
+function CodingProjectThumbnail({ dir=0, slug, title, images, headImgNum, cate, skills, techStack, thumbnailDes }) {
   /**
    * <IlluProjectThumbnail 
           key={p.id}
@@ -17,7 +17,7 @@ function CodingProjectThumbnail({ dir=0, slug, title, images, cate, skills, tech
   return (
     <div className={topDivClass}>
       <Link to={slug} className='coding thumb-link link-no-hover' >
-        <ImageBox images={images}/>
+        <ImageBox images={images} headImgNum={headImgNum} />
         <div className='textBox'>
           <div className='title'>
             <h2>{title}</h2>
