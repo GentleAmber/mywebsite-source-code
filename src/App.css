@@ -116,15 +116,12 @@ body:not(.applayout) #root {
 .app-navlink.active {
   color: var(--color-foreground);
 }
-.app-bg {
-  margin-top: 1.25rem;
-}
 /* app-bg */
 .app-bg {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 /* AboutMe */
@@ -142,6 +139,18 @@ body:not(.applayout) #root {
 }
 
 /* Illu list */
+.works-wrapper.illu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.works-intro.illu {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 400px;
+}
 .works-display.illustrations {
   padding-top: var(--padding-root-height);
   display: grid;
@@ -189,21 +198,29 @@ body:not(.applayout) #root {
   align-items: center;
 }
 .coding.thumb {
-  width: 85%;
+  width: 80%;
   transition: 0.1s;
   box-shadow: 10px 5px 5px var(--color-box-shadow);
-  padding: 16px;
+  padding: 1rem 50px;
 }
 .coding.thumb h2 {
   color: var(--color-foreground);
   margin: 0.3em 0 0.05em 0;
 }
-.thumb.dir-0 {
-  
+.thumb.dir-1 .thumb-link {
+  flex-direction: row-reverse;
 }
 .coding.thumb .textBox {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dir-0 .textBox {
+  margin-left: auto;
+}
+.coding.thumb .textBox p {
+  margin: 0.2em 0;
 }
 .coding.thumb-link {
   width: 100%;
@@ -212,6 +229,7 @@ body:not(.applayout) #root {
 }
 .coding.thumb-link .thumb-des {
   color: var(--color-foreground);
+  text-align: start;
 }
 .coding.thumb:hover {
   transform: scale(1.01);
@@ -222,6 +240,9 @@ body:not(.applayout) #root {
 .coding.thumb .title {
   color: var(--color-artistic);
   font-size: 2rem;
+}
+.coding.thumb .tags {
+  margin: 0.3em 0;
 }
 .coding.thumb .tag * {
   padding: 0 0.3em;
@@ -238,55 +259,42 @@ body:not(.applayout) #root {
 .thumb .tech-stack.tag {
   color: var(--color-artistic-green);
 }
-.imgbox:not(.image-1):not(.image-0) {
-  max-width: 50%;
+.imgbox {
+  max-width: 60%;
   min-width: 400px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.imgbox:not(.image-1):not(.image-0) img {
-  position: relative;
-  width: 50%;
+.imgbox img {
+  max-width: 90%;
+  min-width: 300px;
 }
 .imgbox img {
   border-radius: calc(var(--border-radius-container) / 2);
   border: solid var(--border-width-container) var(--color-border);
 }
-.imgbox.image-1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.imgbox.image-1 img {
-  width: 90%;
-}
-.imgbox.image-2 img:nth-child(1) {
-  z-index: 30;
-  left: 5%;
-} 
-.imgbox.image-2 img:nth-child(2) {
-  z-index: 20;
-  width: 40%;
-  bottom: 3%;
-} 
-.imgbox.image-3 img:nth-child(1) {
-  z-index: 30;
-  left: 5%;
-  top: 10%;
-}
-.imgbox.image-3 img:nth-child(2) {
-  z-index: 20;
-  right: 20%;
-  bottom: 4%;
-} 
-.imgbox.image-3 img:nth-child(3) {
-  z-index: 10;
-  right: 5%;
-}
-
 /* Illu + coding list mutual part */
 .thumb {
   border: solid var(--border-width-container) var(--color-border);
   border-radius: var(--border-radius-container);
+}
+.works-intro {
+  align-self: stretch;
+  margin-bottom: 5rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+}
+.works-intro p{
+  max-width: 65%;
+  min-width: 30%;
+  font-size: 1.6rem;
+}
+.works-intro h1 {
+  font-size: 2.4rem;
 }
 
 
@@ -390,7 +398,10 @@ body:not(.dark) .illu-project-images img{
   );
 }
 
-
+/* Coding Project */
+.coding-project #tank-game img{
+  max-width: 90%;
+}
 
 /* footer */
 footer {

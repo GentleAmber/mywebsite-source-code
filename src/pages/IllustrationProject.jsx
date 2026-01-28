@@ -4,7 +4,7 @@ import { IoReturnDownBack } from "react-icons/io5"
 function IllustrationProject() {
   const project = useLoaderData()
 
-  /* Preparation for Other Works */
+  /* Preparation for masonry structure */
   const column1 = [];
   const column2 = [];
   if (project.id === 6) {

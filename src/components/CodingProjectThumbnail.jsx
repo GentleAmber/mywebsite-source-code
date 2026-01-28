@@ -1,23 +1,16 @@
 import { Link } from 'react-router-dom'
-import ImageBox from './ImageBox'
 
 // value for dir: image on the left(0), on the right(1)
-function CodingProjectThumbnail({ dir=0, slug, title, images, headImgNum, cate, skills, techStack, thumbnailDes }) {
-  /**
-   * <IlluProjectThumbnail 
-          key={p.id}
-          headImage={p.headImage} 
-          cate={p.category}
-          slug={p.slug}
-        />
-   */
+function CodingProjectThumbnail({ dir=0, slug, title, images, cate, skills, techStack, thumbnailDes }) {
   const topDivClass = `coding thumb dir-${dir}`
 
   
   return (
-    <div className={topDivClass}>
+    <div className={topDivClass} id={slug}>
       <Link to={slug} className='coding thumb-link link-no-hover' >
-        <ImageBox images={images} headImgNum={headImgNum} />
+        <div className='imgbox'>
+          <img src={images[0]}></img>
+        </div>
         <div className='textBox'>
           <div className='title'>
             <h2>{title}</h2>
@@ -34,7 +27,11 @@ function CodingProjectThumbnail({ dir=0, slug, title, images, headImgNum, cate, 
             </div>
           </div>
           <div className='thumb-des'>
-            <p>{thumbnailDes}</p>
+            {thumbnailDes.split("\n").map((line, i) => (
+              <p key={i}>
+                {line}
+              </p>
+            ))}
           </div>
         </div>
       </Link>

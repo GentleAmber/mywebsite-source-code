@@ -12,6 +12,11 @@ import imsystem_client_5 from './../assets/coding-imsystem/imsystem_client_5.png
 import imsystem_client_6 from './../assets/coding-imsystem/imsystem_client_6.png'
 import indexArt from './../assets/web-public-api/public-api-index.png'
 import searchArt from './../assets/web-public-api/public-api-search.png'
+import indexNotes from './../assets/web-book-notes/index.png'
+import signupNotes from './../assets/web-book-notes/signup.png'
+import addbookNotes from './../assets/web-book-notes/addbook.png'
+
+
 
 // By default, images in array images will be used in thumbnail according to their index. Relevant 
 // logic is written in components/ImageBox.jsx
@@ -21,27 +26,23 @@ const projects = [
     slug: 'tank-game',
     title: 'Tank Game',
     category: ['2D Game Development'],
-    skills: ['OOP design', 'Graphics', 'Multithreaded Programming', 'File I/O'],
+    skills: ['OOP design', 'Graphics', 'Multithreaded Programming', 'Event Management', 'File I/O'],
     techStack: ['Java', 'JPanel'],
-    thumbnailDes: 'A demo tank game where the player controls a tank to fight multiple enemy tanks. Supports save and load. Modules: Player Control; Enemy AI (randomly moves and shoots); Collision Detection; Rendering (with JPanel); Game State Management; Animation; Event Handling; Thread Management. ',
-    fullDes: '',
+    thumbnailDes: "A mini tank game where the player controls a tank to fight multiple enemy tanks. Save and load is supported though a bit buggy. \nThis project was written to help myself understand multithreading, event management, etc.",
     images: [game, gameLog, structureInfo_1, structureInfo_2],
-    headImgNum: 2
   },
   {
     id: 2,
     slug: 'instant-message-system',
     title: 'Instant Message System',
     category: ['Network Programming'],
-    skills: [],
+    skills: ['File I/O'],
     techStack: ['Java', 'Socket'],
-    thumbnailDes: '',
-    fullDes: '',
+    thumbnailDes: "An instant message system that runs locally, allows multiple clients to exchange messages, as well as send files.\nBy writting this project, I have learnt how network works, and worked out to do self-hosting later on.",
     images: [
       imsystem_1, imsystem_2, imsystem_client_1, imsystem_client_2, imsystem_client_3,
       imsystem_client_4, imsystem_client_5, imsystem_client_6
     ],
-    headImgNum: 3
   },
   {
     id: 3,
@@ -50,22 +51,18 @@ const projects = [
     category: ['Full-stack Web Development'],
     skills: ['API Integration', 'Dynamic Pagination'],
     techStack: ['Node.js', 'Express.js', 'EJS'],
-    thumbnailDes: '',
-    fullDes: '',
+    thumbnailDes: "This is a website with 1) a home page where a random piece of art is displayed upon refreshed, and 2) a search page where users can search for artworks under certain criteria. The Metropolitan Museum's public API is used.",
     images: [indexArt, searchArt],
-    headImgNum: 2
   },
   {
     id: 4,
     slug: 'my-book-notes',
     title: 'My Book Notes',
     category: ['Full-stack Web Development'],
-    skills: ['User Authentication', 'Relational Database Design & Integration'],
+    skills: ['User Authentication', 'Relational Database Design'],
     techStack: ['Next.js', 'React.js', 'postgreSQL'],
-    thumbnailDes: '',
-    fullDes: '',
-    images: [],
-    headImgNum: 0
+    thumbnailDes: "Users can create their own accounts. After logging in, they can write notes for books in the library, and add books to library if admin approves.\nThis website uses PostgreSQL to save user data.",
+    images: [indexNotes, signupNotes, addbookNotes],
   }
 ]
 

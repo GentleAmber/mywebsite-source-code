@@ -15,6 +15,7 @@ import CodingList from "./pages/CodingList"
 import IlluList from "./pages/IlluList"
 
 import illuProjectLoader from "./pages/illuProject.loader"
+import codingProjectLoader from "./pages/codingProject.loader"
 
 const router = createBrowserRouter([
   {
@@ -47,7 +48,7 @@ const router = createBrowserRouter([
               {
                 path: ":name",
                 element: <CodingProject />,
-                loader: illuProjectLoader,// Needs to change to coding loader
+                loader: codingProjectLoader,
                 errorElement: <AppErrorPage />
               }
             ]
