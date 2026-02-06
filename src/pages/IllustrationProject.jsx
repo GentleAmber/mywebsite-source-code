@@ -22,7 +22,7 @@ function IllustrationProject() {
   return (
     <div className='illu-project'>
       
-      <h1>{project.title}</h1>
+      <h2>{project.title}</h2>
       <p>{project.shortDes}</p>
 
       {project.id === 1 && (

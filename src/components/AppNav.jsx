@@ -13,7 +13,7 @@ function AppNav() {
         <NavLink to='aboutme' className='app-navlink'>About Me</NavLink>
         <NavLink to='coding' className='app-navlink'>Coding</NavLink>
         <NavLink to='illustrations' className='app-navlink'>Illustrations</NavLink>
-        <NavLink to='interests' className='app-navlink'>Interests</NavLink>
+        <NavLink to='resume' className='app-navlink'>Resume</NavLink>
         <DarkModeToggle isDark={isDark} setIsDark={setIsDark}/>
       </div>
     </nav>

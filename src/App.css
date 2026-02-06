@@ -5,6 +5,7 @@ body {
   --border-radius-container: 1.5rem;
   --border-width-container: 1.9px;
   --border-width-nav-and-footer: 1.5px;
+  --gap-row-general: 2rem;
   
   --color-artistic-yellow: #8b740c; 
   --color-artistic-orange: #c23d00;
@@ -16,6 +17,9 @@ body.dark {
   --color-artistic-orange: #ee7f36;
   --color-artistic-green: #40e23a; 
   --color-box-shadow: #444444;
+}
+.text-highlight {
+  color: var(--color-artistic);
 }
 /* Cover */
 .cover-bg h1 {
@@ -125,17 +129,247 @@ body:not(.applayout) #root {
 }
 
 /* AboutMe */
+#aboutme-intro {
+  margin-top: var(--gap-row-general);
+}
 .showcase {
   display: flex;
   gap: 2rem;
   font-size: 1rem;
   text-align: start;
+  margin-top: var(--gap-row-general);
 }
 .showcase-unit-title {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
+}
+.showcase-unit-title > span {
+  font-size: var(--font-size-slightly-bigger-p);
+}
+.pre-footer {
+  display: flex;
+  gap: 1rem;
+  align-self: stretch;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 30px;
+  /* border-top: solid var(--border-width-container) var(--color-border); */
+}
+#contact-me {
+  display: flex;
+  text-align: start;
+  flex-direction: column;
+  
+}
+#contact-me p,#contact-me a {
+  margin: 0.3em 0;
+}
+#contact-me-icons {
+  display: flex;
+  gap: 1rem;
+}
+#contact-me-icons a {
+  font-size: 1.6rem;
+}
+#profile {
+  border-radius: 50%;
+  width: 12rem;
+  height: auto;
+}
+.aboutme-card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.elementor-section {
+  background-color: #d884cd;
+}
+.dark .elementor-section {
+  background-color: #a33c84;
+}
+.elementor-shape {
+  direction: ltr;
+  left: 0;
+  line-height: 0;
+  
+  position: absolute;
+  width: 100%;
+}
+.elementor-shape-top {
+  top: -1px;
+}
+.elementor-shape svg {
+  display: block;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+}
+.elementor-shape-top svg {
+  width: calc(270% + 1.3px);
+  height: 380px;
+  display: block;
+}
+.elementor-shape-bottom svg{
+  transform: scaleY(-1);
+}
+.elementor-shape-bottom {
+  bottom: -1px;
+  transform: translateX(-60%);
+  width: calc(270% + 1.3px);
+  height: 380px;
+  display: block;
+}
+.elementor-shape-fill {
+  fill: var(--color-background);
+}
+.elementor-cards {
+  position: relative;
+  padding: 150px 0px;
+}
+.elementor-container {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+  align-items: center;
+}
+.elementor-content {
+  max-width: 40%;
+  text-align: start;
+}
+.elementor-image {
+  max-width: 35%;
+}
+.elementor-image img {
+  border-radius: var(--border-radius-container);
+  width: 100%;
+}
+/* Timeline */
+.timeline-wrapper {
+  margin-top: var(--gap-row-general);
+  box-sizing: border-box;
+  text-align: start;
+}
+.timeline-wrapper h3 {
+  text-align: center;
+}
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: var(--color-foreground);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+/* Container around content */
+.timeline .container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+/* The circles on the timeline */
+.timeline .container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: rgb(245, 242, 235);
+  border: 4px solid var(--color-artistic);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+/* Place the container to the left */
+.timeline .left {
+  left: -7.7%;
+}
+/* Place the container to the right */
+.timeline .right {
+  left: 50%;
+}
+/* Add arrows to the left container (pointing right) */
+.timeline .left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid var(--color-foreground);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent var(--color-foreground);
+}
+/* Add arrows to the right container (pointing left) */
+.timeline .right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid var(--color-foreground);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--color-foreground) transparent transparent;
+}
+/* Fix the circle for containers on the right side */
+.timeline .right::after {
+  left: -16px;
+}
+/* The actual content */
+.timeline .content {
+  padding: 20px 30px;
+  background-color: var(--color-background);
+  border: solid 2px var(--color-foreground);
+  position: relative;
+  border-radius: 6px;
+  border: solid 2px var(--color-foreground);
+}
+.timeline .right .content {
+  box-shadow: 8px 8px 3px var(--color-box-shadow);
+}
+.timeline .left .content {
+  box-shadow: -8px 8px 3px var(--color-box-shadow);
+}
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+/* Full-width containers */
+  .timeline .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+/* Make sure that all arrows are pointing leftwards */
+  .timeline .container::before {
+    left: 60px;
+    border: medium solid var(--color-foreground);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--color-foreground) transparent transparent;
+  }
+/* Make sure all circles are at the same spot */
+  .timeline .left::after, .right::after {
+    left: 15px;
+  }
+/* Make all right containers behave like the left ones */
+  .timeline .right {
+    left: 0%;
+  }
 }
 
 /* Illu list */
@@ -145,12 +379,7 @@ body:not(.applayout) #root {
   justify-content: center;
   align-items: center;
 }
-.works-intro.illu {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 400px;
-}
+
 .works-display.illustrations {
   padding-top: var(--padding-root-height);
   display: grid;
@@ -219,9 +448,6 @@ body:not(.applayout) #root {
 .dir-0 .textBox {
   margin-left: auto;
 }
-.coding.thumb .textBox p {
-  margin: 0.2em 0;
-}
 .coding.thumb-link {
   width: 100%;
   display: flex;
@@ -274,6 +500,7 @@ body:not(.applayout) #root {
   border-radius: calc(var(--border-radius-container) / 2);
   border: solid var(--border-width-container) var(--color-border);
 }
+
 /* Illu + coding list mutual part */
 .thumb {
   border: solid var(--border-width-container) var(--color-border);
@@ -287,14 +514,24 @@ body:not(.applayout) #root {
   flex-direction: column;
   align-items: start;
   text-align: start;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 400px;
+}
+.works-intro .textbox {
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+  border-radius: var(--border-radius-container);
+  padding: 1.2rem;
+  max-width: 60%;
 }
 .works-intro p{
-  max-width: 65%;
-  min-width: 30%;
-  font-size: 1.6rem;
+  font-size: var(--font-size-slightly-bigger-p);
 }
-.works-intro h1 {
-  font-size: 2.4rem;
+.works-wrapper {
+  padding-bottom: 2.5rem;
 }
 
 
@@ -312,7 +549,7 @@ body:not(.applayout) #root {
  padding: 4rem 140px 0 0;
 }
 .illu-project > p {
-  font-size: 1.5rem;
+  font-size: var(--font-size-slightly-bigger-p);
 }
 .illu-project img {
   cursor: -moz-zoom-in; 
@@ -399,13 +636,34 @@ body:not(.dark) .illu-project-images img{
 }
 
 /* Coding Project */
-.coding-project #tank-game img{
-  max-width: 90%;
+.coding-project .return {
+  padding: 0;
 }
+.coding-project {
+  padding: 1.1rem 40px;
+}
+.coding-project img{
+  max-width: 65%;
+  min-width: 400px;
+}
+.coding-project .para-wrapper,.repository {
+  text-align: start;
+}
+.coding-project .para-wrapper h4 {
+  margin-top: 1.5em;
+}
+.repository {
+  font-size: 1.5rem;
+  margin: 0.5em 0;
+}
+.coding-project .img-wrapper {
+  margin: 1.2rem 0;
+}
+
 
 /* footer */
 footer {
-  margin-top: 3rem;
+  margin-top: var(--gap-row-general);
   padding: 1.5rem 0;
   border-top: solid var(--border-width-nav-and-footer) var(--color-border);
 }

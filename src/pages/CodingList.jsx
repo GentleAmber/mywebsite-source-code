@@ -20,14 +20,13 @@ function CodingList() {
           `
         }}
       >
-        <h1>Basics</h1>
-        <p>
-          I believe the basics are the most important in most subjects. I started learning programming out of curiosity
-          of video games, and have since learnt Java and web development thoroughly. Behind these, I taught myself 
-          the fundamentals of computer engineering and architecture by playing Turing Complete and doing part
-          of the course NandtoTetris. I am always curious about the foundations and composations of the whole 
-          picture of computer science. And I hope my programming reflects that.
-        </p>
+        <div className="textbox">
+          <p>
+            I believe the basics are the most important in all the subjects, especially in this era of AI. 
+            Therefore, on my programming journey, 
+            I go deeper from the languages themselves to the fundamental structures of computers and network.
+          </p>
+        </div>
       </div>
       <div  className='works-display coding'>
         {projects.map((p, index) =>

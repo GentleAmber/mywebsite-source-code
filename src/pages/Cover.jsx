@@ -7,7 +7,7 @@ function Cover() {
       <Link to='aboutme' className='cover-link'>About Me</Link>
       <Link to='coding' className='cover-link'>Coding</Link>
       <Link to='illustrations' className='cover-link'>Illustrations</Link>
-      <Link to='interests' className='cover-link'>Interests</Link>
+      <Link to='Resume' className='cover-link'>Resume</Link>
     </div>
   )
 }

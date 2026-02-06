@@ -17,16 +17,26 @@
   text-align: center;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 h2 {
   font-size: 2.4rem;
 }
-p {
-  font-size: 1rem;
+h3 {
+  font-size: 2rem;
 }
-h1,h2,p {
-  margin: 0.4em 0;
+h4 {
+  font-size: 1.5rem;
+}
+p {
+  --font-size-slightly-bigger-p: 1.3rem;
+  font-size: 1.2rem;
+}
+p + p {
+  margin-top: 1em;
+}
+h1,h2,h3,h4,p {
+  margin: 0.3em 0;
 }
 a {
   font-weight: 500;
@@ -39,7 +49,7 @@ a:not(.link-no-hover):hover {
 }
 body {
   --color-foreground: #251a38;
-  --color-background: rgb(255, 255, 255);
+  --color-background: rgb(245, 242, 235);
   --color-artistic: #ee2a9c;
   --color-border: rgb(32, 32, 32);
   --color-hover-background: #bfbec2;

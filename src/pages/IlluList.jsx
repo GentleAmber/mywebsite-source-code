@@ -17,11 +17,18 @@ function IlluList() {
           `
         }}
       >
-        <h1></h1>
-        <p>
-          I believe everyone has ability to create. Drawing is a good way for me to explore my own thoughts and feelings.
-          I recognise some of my own patterns or what I value most when I create a story. 
-        </p>
+        <div className="textbox">
+          <h1></h1>
+          <p>
+            I started learning art at the age of 10. I have been doing it on and off but it is always with me there. 
+            I don't have a uniform "style" which I now see as a good thing. 
+          </p>
+          <p>
+            My projects feature a wide range of subjests. Some are comic stories, while some are just simple
+            cute chat stickers for everyone to use. Most of them are created with digital device.
+          </p>
+        </div>
+        
       </div>
       <div className='works-display illustrations'>
         {projects.map(p =>

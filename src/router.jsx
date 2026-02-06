@@ -6,6 +6,7 @@ import AppLayout from "./layouts/AppLayout"
 import Cover from "./pages/Cover"
 import AboutMe from "./pages/AboutMe"
 import Interests from "./pages/Interests"
+import Resume from "./pages/Resume"
 import Coding from "./pages/WorksCoding"
 import Illustrations from "./pages/WorksIllustrations"
 import IllustrationProject from "./pages/IllustrationProject"
@@ -34,8 +35,8 @@ const router = createBrowserRouter([
             element: <AboutMe /> 
           },
           { 
-            path: "interests", 
-            element: <Interests /> 
+            path: "resume", 
+            element: <Resume /> 
           },
           { 
             path: "coding",
