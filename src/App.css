@@ -21,48 +21,6 @@ body.dark {
 .text-highlight {
   color: var(--color-artistic);
 }
-/* Cover */
-.cover-bg h1 {
-  font-size: 36px;
-  color: var(--color-foreground);
-  opacity: 0%;
-  animation: fadeIn 1.5s ease-in forwards;
-  margin: 0 0 5rem 0;
-}
-.cover-bg * {
-  font-family: "Bowlby One SC", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-@keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-.cover-link {
-  font-size: 70px;
-  display: block;
-  transition: 0.2s ease-out;
-}
-.cover-link:hover {
-  transform: scale(1.05);
-}
-/* Route-based body centering when on cover route */
-body:not(.applayout) {
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-body:not(.applayout) #root {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 
 /* AppLayout */
 /* Narbar */

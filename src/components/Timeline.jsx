@@ -25,17 +25,8 @@ function Timeline() {
             <p>
               Worked as a game designer at Lingxi Games, Alibaba.
             </p>
-            
           </div>
         </div>
-        {/* <div className="container left">
-          <div className="content">
-            <h2>2022</h2>
-            <p>
-              Started studying Illustration at Edinburgh College of Art.
-            </p>
-          </div>
-        </div> */}
         <div className="container left">
           <div className="content">
             <h2>2020</h2>
