@@ -10,8 +10,7 @@ const allExperiences = [
         position: 'Shop Assistant (part-time)',
         company: 'Starlight Chinese Supermarket',
         location: 'Edinburgh, UK',
-        description: `I moved back to Edinburgh where I did my master's studies. I work at the supermarket part-time 
-        to earn some money and to learn interacting with different people.`
+        description: `Provide friendly customer service. Update items and promotions information in the management system.`
       },
       {
         id: 2,

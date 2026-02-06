@@ -1,4 +1,10 @@
 function ShowcaseUnit({experience}) {
+
+  const des = experience.description
+    .split("\n")
+    .map(line => line.trim()) 
+    .filter(Boolean);
+
   return (
     <div className='showcase-unit'>
       <div className='showcase-unit-title'>
@@ -7,8 +13,10 @@ function ShowcaseUnit({experience}) {
         <span>{experience.company}</span>
         <span>{experience.location}</span>
       </div>
-      
-      <p>{experience.description}</p>
+      <ul>
+        {des.map((d, index) => 
+        <li key={index}>{d}</li>)}
+      </ul>
     </div>
   )
 }
