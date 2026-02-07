@@ -90,22 +90,6 @@ body.dark {
 #aboutme-intro {
   margin-top: var(--gap-row-general);
 }
-.showcase {
-  display: flex;
-  gap: 2rem;
-  font-size: 1rem;
-  text-align: start;
-  margin-top: var(--gap-row-general);
-}
-.showcase-unit-title {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  justify-content: space-between;
-}
-.showcase-unit-title > span {
-  font-size: var(--font-size-slightly-bigger-p);
-}
 .pre-footer {
   display: flex;
   gap: 1rem;
@@ -137,11 +121,11 @@ body.dark {
   height: auto;
 }
 .aboutme-card {
-  position: relative;
   width: 100%;
   overflow: hidden;
 }
 .elementor-section {
+  position: relative;
   background-color: #d884cd;
 }
 .dark .elementor-section {
@@ -151,8 +135,8 @@ body.dark {
   direction: ltr;
   left: 0;
   line-height: 0;
-  
   position: absolute;
+  z-index: 10;
   width: 100%;
 }
 .elementor-shape-top {
@@ -164,10 +148,10 @@ body.dark {
   position: relative;
   transform: translateX(-50%);
 }
-.elementor-shape-top svg {
+.elementor-shape-top svg,.elementor-shape-bottom svg {
+  height: auto;
+  min-height: 120px;
   width: calc(270% + 1.3px);
-  height: 380px;
-  display: block;
 }
 .elementor-shape-bottom svg{
   transform: scaleY(-1);
@@ -175,15 +159,14 @@ body.dark {
 .elementor-shape-bottom {
   bottom: -1px;
   transform: translateX(-60%);
-  width: calc(270% + 1.3px);
-  height: 380px;
-  display: block;
+  width: 100%;
 }
 .elementor-shape-fill {
   fill: var(--color-background);
 }
 .elementor-cards {
   position: relative;
+  z-index: 20;
   padding: 150px 0px;
 }
 .elementor-container {
@@ -618,6 +601,47 @@ body:not(.dark) .illu-project-images img{
   margin: 1.2rem 0;
 }
 
+/* Resume */
+.showcase-ul {
+  padding: 0.5rem 0 0 20px;
+}
+.showcase {
+  display: flex;
+  gap: 50px;
+  font-size: 1.2rem;
+  text-align: start;
+  margin-top: var(--gap-row-general);
+  padding: 0 1%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.showcase-column-title {
+  text-align: center;
+
+}
+.showcase-column {
+  max-width: 45%;
+}
+.showcase-unit-title {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.showcase-unit {
+  padding-top: 0.8rem;
+  margin-top: 1rem;
+  border-top: solid 1.5px var(--color-border);
+}
+.showcase-unit-title > span:nth-child(even) {
+  text-align: end;
+}
+.showcase-column > ul {
+  list-style: none;
+  padding: 0;
+}
 
 /* footer */
 footer {

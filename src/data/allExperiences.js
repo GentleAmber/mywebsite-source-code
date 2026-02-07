@@ -1,5 +1,5 @@
 const allExperiences = [
-  // Work
+  // Use [n] to create new line in property description.
   {
     id: 1,
     attr: 'Work',
@@ -10,7 +10,7 @@ const allExperiences = [
         position: 'Shop Assistant (part-time)',
         company: 'Starlight Chinese Supermarket',
         location: 'Edinburgh, UK',
-        description: `Provide friendly customer service. Update items and promotions information in the management system.`
+        description: `Provide friendly customer service. [n]Update items and promotions information in the management system.`
       },
       {
         id: 2,
@@ -18,13 +18,10 @@ const allExperiences = [
         position: 'Game Designer',
         company: 'Lingxi Games, Alibaba Group',
         location: 'Guangzhou, CN',
-        description: `This job at Lingxi Games was meaningful to me. I love good games. I learnt a lot
-        about game design and development while I was there. However I left because of the management style, 
-        the type of game being made, and my personal reason.
-        When I was there, I designed a battle pass system and other features. 
-        Analysed 480,000 player data entries to ensure fair difficulty curves.
-        Produced detailed, pseudocode-style documentations for every design.
-        Collaborated closely with programmers, UX designers, and game testers to ensure smooth development.`
+        description: `Designed a battle pass system and other features. Analysed over 480,000 player data entries to ensure balanced and fair difficulty curves for the battle pass system.
+        [n]Produced detailed, pseudocode-style documentations for every design to eliminate misunderstanding.
+        [n]Collaborated closely with programmers, UX designers, game testers to ensure smooth development and alignment with design documentation.
+        [n]Maintained and updated game data for every season. Automated data entry with customed formulas in Excel, reducing manual workload for all the designers.`
       },
       {
         id: 3,
@@ -32,7 +29,8 @@ const allExperiences = [
         position: 'Game Designer (Intern)',
         company: 'Lingxi Games, Alibaba Group',
         location: 'Guangzhou, CN',
-        description: ``
+        description: `Designed and implemented a game level with Unity.
+        [n]Designed several minor features that were released in the game, including side gameplay and UI enhancements.`
       },
       {
         id: 4,
@@ -40,9 +38,9 @@ const allExperiences = [
         position: 'Freelance Illustrator',
         company: '/',
         location: 'Remote',
-        description: `While working on my portfolio and postgraduate application, 
-        I undertook some paid illustration commissions.`
-      }
+        description: `Undertook some paid commisions including graduation souvenirs, large-sized illustrations 
+        for home decoration and wedding invitations.`
+      },
     ]
   }, 
   
@@ -57,13 +55,14 @@ const allExperiences = [
         position: 'Programming',
         company: 'Self-study',
         location: '/',
-        description: 
-        `I started learning programming after quitting game designer, 
-        initially to understand how games run. However, with my interests growing stronger and the studies going deeper, 
-        I ended up having learnt Java and full-stack web development (including html + css + js, common tools, libraries 
-        and frameworks like Express, EJS, React, Next.js and Vite). 
-        I have developed this website, a multithreaded game, an instant messaging system, and a database-driven website 
-        implementing CRUD operations till now, and will do more in the future.`
+        description: `Learnt Java and web development (html + css + javascript & common frameworks, tools and libraries 
+        including Express.js, EJS, React, Next.js and Vite). `
+        // `I started learning programming after quitting game designer, 
+        // initially to understand how games run. However, with my interests growing stronger and the studies going deeper, 
+        // I ended up having learnt Java and full-stack web development (including html + css + js, common tools, libraries 
+        // and frameworks like Express, EJS, React, Next.js and Vite). 
+        // I have developed this website, a multithreaded game an instant messaging system, and a database-driven website 
+        // implementing CRUD operations till now, and will do more in the future.,`
       },
       {
         id: 2,
@@ -71,7 +70,7 @@ const allExperiences = [
         position: 'MA, Illustration',
         company: 'The University of Edinburgh',
         location: 'Edinburgh, UK',
-        description: `I developed good aesthetic taste and made some of the life-changing friends there.`
+        description: `Developed good aesthetic taste.`
       },
       {
         id: 3,
@@ -79,8 +78,8 @@ const allExperiences = [
         position: 'BE, Traffic Engineering',
         company: 'Tongji University',
         location: 'Shanghai, CN',
-        description: `I won a schoolarship and graduated with the grade of 84.56/100.
-        Courses including: Advanced Mathematics, C/C++ Programming, Foundation of Database, 
+        description: `Won a uni-level schoolarship. Graduated with the grade 84.56/100.
+        [n]Courses included: Advanced Mathematics, C/C++ Programming, Foundation of Database, 
         Probability and Mathematical Statistics, Linear Algebra.`
       },
     ]

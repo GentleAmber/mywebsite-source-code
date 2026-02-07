@@ -47,6 +47,12 @@ a {
 a:not(.link-no-hover):hover {
   color: var(--color-foreground);
 }
+
+footer {
+  margin-top: var(--gap-row-general);
+  padding: 1.5rem 0;
+  border-top: solid var(--border-width-nav-and-footer) var(--color-border);
+}
 body {
   --color-foreground: #251a38;
   --color-background: rgb(245, 242, 235);

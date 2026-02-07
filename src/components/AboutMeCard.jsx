@@ -17,7 +17,7 @@ function AboutMeCard({ aboutmeData }) {
         </div>
         <section className='elementor-cards'> 
           {aboutmeData.map((data) => (
-            <div className='elementor-container'>
+            <div className='elementor-container' key={data.id}>
               <div className='elementor-content'>
                 <h2>
                   {data.title}
