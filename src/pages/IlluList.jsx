@@ -1,6 +1,6 @@
 import projects from "../data/illustrationProjects"
 import IlluProjectThumbnail from "./../components/IlluProjectThumbnail"
-import illuIntro from "./../assets/illu-various/various-6.jpg"
+import illuIntro from "./../assets/illu-yourowngood/yog-3.jpg"
 
 function IlluList() {
   return (

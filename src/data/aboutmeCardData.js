@@ -6,7 +6,7 @@ const aboutmeData = [
     title: 'WHAT I DO',
     content: `I do full-stack web development. What I can build include personal websites like the one 
     you're looking at, business websites (with payment system), websites with database and log-in system
-    like Goodreads`,
+    like Goodreads.`,
   },
   {
     id: 1,
@@ -15,7 +15,6 @@ const aboutmeData = [
     illustration, and have been teaching myself web development. I am proficient in Java and HTML+CSS+JS. 
     In addition to the languages themselves, I have also been studying the basics like the structure
     of computers and network.`,
-    // img: dummy,
   }, 
   {
     id: 2,
@@ -24,7 +23,6 @@ const aboutmeData = [
     interest is in creation during my undergraduate studies. Then I realised I enjoy combining engineering and 
     art during my second major. I was honored to work as a game designer after graduation. While
     doing the job, I found it both necessary and attractive to learn programming. That's why I started the self-study.`,
-    
   }, 
   {
     id: 3,

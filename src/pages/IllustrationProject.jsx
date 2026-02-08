@@ -26,7 +26,7 @@ function IllustrationProject() {
       <p>{project.shortDes}</p>
 
       {project.id === 1 && (
-        <div className='illu-project-images grid-6-column'>
+        <div className='illu-project-images grid-6-column' id={project.slug}>
           {project.contentImage.map((img, i) => (
             <a key={i} href={img} className='zoom-in' target='_blank'>
               <img src={img} />
@@ -36,7 +36,7 @@ function IllustrationProject() {
       )}
 
       {project.id === 2 && (
-        <div className='illu-project-images couplet'>
+        <div className='illu-project-images couplet' id={project.slug}>
           <a href={project.contentImage[0]} className='zoom-in' target='_blank'>
             <img src={project.contentImage[0]} />
           </a>
@@ -55,7 +55,7 @@ function IllustrationProject() {
       )}
 
       {project.id === 3 && (
-        <div className='illu-project-images grid-4-column'>
+        <div className='illu-project-images grid-4-column' id={project.slug}>
           {project.contentImage.map((img, i) => (
             <a key={i} href={img} className='zoom-in' target='_blank'>
               <img src={img} />
@@ -65,7 +65,7 @@ function IllustrationProject() {
       )}
 
       {project.id === 4 && (
-        <div className='illu-project-images standard'>
+        <div className='illu-project-images standard' id={project.slug}>
           {project.contentImage.map((img, i) => (
             <a key={i} href={img} className='zoom-in' target='_blank'>
               <img src={img} />
@@ -75,7 +75,7 @@ function IllustrationProject() {
       )}
 
       {project.id === 5 && (
-        <div className='illu-project-images grid-same-height'>
+        <div className='illu-project-images grid-same-height' id={project.slug}>
           {project.contentImage.map((img, i) => (
           <a key={i} href={img} className='zoom-in' target='_blank'>
             <img src={img} />
@@ -85,7 +85,7 @@ function IllustrationProject() {
       )} 
 
       {project.id === 6 && (
-        <div className='illu-project-images maso-wrapper maso-switcher masonry'>
+        <div className='illu-project-images maso-wrapper maso-switcher masonry' id={project.slug}>
           <div className='maso-flow'>
             {column1.map((img, i) => (
               <a key={i} href={img} className='zoom-in' target='_blank'>
