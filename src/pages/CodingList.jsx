@@ -22,9 +22,9 @@ function CodingList() {
       >
         <div className="textbox">
           <p>
-            I believe the basics are the most important in all the subjects, especially in this era of AI. 
-            Therefore, on my programming journey, 
-            I go deeper from the languages themselves to the fundamental structures of computers and network.
+            I believe that fundamentals are the most important part of any discipline, 
+            especially in the era of AI. Therefore, in my programming journey, I focus not only on programming
+            languages but also on the fundamental structures of computers and networks.
           </p>
         </div>
       </div>

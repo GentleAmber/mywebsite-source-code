@@ -20,7 +20,7 @@ function Timeline() {
           <div className="content">
             <h2>2023</h2>
             <p>
-              Graduated from Edinburgh College of Art with Master of Art in Illustration.
+              Graduated from Edinburgh College of Art with a Master of Arts in Illustration.
             </p>
             <p>
               Worked as a game designer at Lingxi Games, Alibaba.
@@ -31,7 +31,7 @@ function Timeline() {
           <div className="content">
             <h2>2020</h2>
             <p>
-              Graduated from Tongji University with Bacholor of Engineering in Traffic Engineering.
+              Graduated from Tongji University with a Bacholor of Engineering in Traffic Engineering.
             </p>
           </div>
         </div>

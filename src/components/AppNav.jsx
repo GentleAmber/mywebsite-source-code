@@ -11,7 +11,7 @@ function AppNav() {
   const dropdownRef = useRef(null)
 
   const isMobile = useMediaQuery({
-    query: "(max-width: 992px)",
+    query: "(max-width: 61rem)",
   })
 
 

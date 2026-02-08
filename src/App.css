@@ -21,7 +21,7 @@ body.dark {
 .text-highlight {
   color: var(--color-artistic);
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 36rem) {
   body {
     --navbar-font-size: 1rem;
     --gap-row-general: 1.4rem;
@@ -172,10 +172,10 @@ body.dark {
 }
 .elementor-section {
   position: relative;
-  background-color: #d884cd;
+  background-color: #eca5e3;
 }
 .dark .elementor-section {
-  background-color: #a33c84;
+  background-color: #923275;
 }
 .elementor-shape {
   direction: ltr;
@@ -333,7 +333,7 @@ body.dark {
 }
 
 /* Responsive timeline on smaller screens */
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 74rem) {
   .timeline .left .content {
     box-shadow: 8px 8px 3px var(--color-box-shadow);
   }
@@ -550,7 +550,7 @@ body.dark {
 .works-wrapper {
   padding-bottom: 2.5rem;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 74rem) {
   .works-intro {
     align-items: center;
     padding: 1.5rem;
@@ -800,7 +800,7 @@ body:not(.dark) .illu-project-images img{
   list-style: none;
   padding: 0;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 62rem) {
   .showcase {
     gap: 3rem;
     font-size: 1rem;
