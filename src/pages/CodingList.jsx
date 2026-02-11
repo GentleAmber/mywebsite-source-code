@@ -24,7 +24,7 @@ function CodingList() {
           <p>
             I believe that fundamentals are the most important part of any discipline, 
             especially in the era of AI. Therefore, in my programming journey, I focus not only on programming
-            languages but also on the fundamental structures of computers and networks.
+            languages but also on the fundamental structures of computers and networking.
           </p>
         </div>
       </div>

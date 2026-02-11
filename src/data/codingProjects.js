@@ -29,7 +29,7 @@ const projects = [
     category: ['Full-stack Web Development'],
     skills: ['User Authentication', 'Relational Database Design'],
     techStack: ['Next.js', 'React.js', 'postgreSQL'],
-    thumbnailDes: "Users can create their own accounts. After logging in, they can write notes for books in the library, and add books to library if admin approves.\nThis website uses PostgreSQL to save user data.",
+    thumbnailDes: "A website with database and user systems for keeping book notes. Users can write notes for books in the library and add new books to it, subject to administrator approval.",
     images: [indexNotes, signupNotes, addbookNotes],
     link: 'https://github.com/GentleAmber/Book-notes',
 
@@ -41,7 +41,7 @@ const projects = [
     category: ['Full-stack Web Development'],
     skills: ['API Integration', 'Dynamic Pagination'],
     techStack: ['Node.js', 'Express.js', 'EJS'],
-    thumbnailDes: "This is a website with 1) a home page where a random piece of art is displayed upon refreshed, and 2) a search page where users can search for artworks under certain criteria. The Metropolitan Museum's public API is used.",
+    thumbnailDes: "A website featuring random artwork display and a search function to find artworks based on specific criteria. The Metropolitan Museum of Art's public API is used to retrieve the data.",
     images: [indexArt, searchArt],
     link: 'https://github.com/GentleAmber/Art-of-the-day',
 
@@ -53,7 +53,7 @@ const projects = [
     category: ['Network Programming'],
     skills: ['File I/O'],
     techStack: ['Java', 'Socket'],
-    thumbnailDes: "An instant message system that runs locally, allows multiple clients to exchange messages, as well as send files.\nBy writting this project, I have learnt how network works, and worked out to do self-hosting later on.",
+    thumbnailDes: "A local instant messaging system that allows multiple clients to exchange messages and transfer files.",
     images: [
       im_diagram, imsystem_1, imsystem_2, imsystem_client_1, imsystem_client_2, imsystem_client_3,
       imsystem_client_4, imsystem_client_5, imsystem_client_6
@@ -68,7 +68,7 @@ const projects = [
     category: ['2D Game Development'],
     skills: ['OOP design', 'Graphics', 'Multithreaded Programming', 'Event Management', 'File I/O'],
     techStack: ['Java', 'JPanel'],
-    thumbnailDes: "A mini tank game where the player controls a tank to fight multiple enemy tanks. Save and load is supported though a bit buggy. \nThis project was written to help myself understand multithreading, event management, etc.",
+    thumbnailDes: "A mini tank game in which the player controls a tank to battle multiple enemy tanks. Save and load functionality is supported, although it remains slightly buggy.",
     images: [game, gameLog, structureInfo_1, structureInfo_2],
     link: 'https://github.com/GentleAmber/Tank-game',
   },

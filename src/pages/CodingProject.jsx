@@ -16,10 +16,10 @@ function CodingProject() {
         <div id={project.slug} className='project-wrapper'>
           <div className='para-wrapper'>
             <h4>
-              To be finished after the project is finished
+              To Be Continued
             </h4>
             <p>
-              tbc.
+              This project is under restructuring. Once the work is finished, this page will be updated. 
             </p>
           </div>
           <div className='img-wrapper'>
@@ -38,26 +38,29 @@ function CodingProject() {
               Introduction
             </h4>
             <p>
-              This is a small entertaining project where I practiced integrating public API with my own app, 
-              and parsing request queries. Lots of efforts were put into tuning up the API, for example filtering out
-              artworks without image data, and forming the search keywords carefully for it to return the most 
+              This is a small entertaining project in which I practiced integrating public API with my own application 
+              and parsing request queries. Lots of efforts were devoted to tuning up the API, such as filtering out
+              artworks without image data and carefully constructing search keywords to return the most 
               relevant results. 
             </p>
             <p>
-              Many result objects returned by the API upon searching have part of their information missing. 
-              Some are titles, some are authors, and others 
-              are images. For this project I choose to use default value for any missing part, but still show 
-              all the result objects. In a more formal situation, objects without image should be removed.
-
+              Many result objects returned by the API have incomplete information. 
+              Some are missing titles, some authors, and others lack images. For this project, 
+              I choose to assign default values to any missing fields while still displaying all results. 
+              In a more formal environment, objects without image would be excluded.
             </p>
           </div>
           <div className='img-wrapper'>
             <a href={project.images[0]} className='zoom-in' target='_blank' >
               <img src={project.images[0]}/>
             </a>
+            <p>Home page of the website</p>
+          </div>
+          <div className='img-wrapper'>
             <a href={project.images[1]} className='zoom-in' target='_blank' >
               <img src={project.images[1]}/>
             </a>
+            <p>Search results of artist "Van Goah"</p>
           </div>
         
         </div>
@@ -70,10 +73,10 @@ function CodingProject() {
               Structure Overview
             </h4>
             <p>
-              The structure of this programme has three parts: client, server and communal part. The file structure
-              is shown here: 
+              This program consists of three main components: the client, the server, and shared modules. 
+              The file structure is shown below:
             </p>
-            <p>
+            <p className='text-codeblock'>
               client<br />
               &nbsp;&nbsp;|- service<br />
               &nbsp;&nbsp;|&nbsp;&nbsp;|- ClientConnectServerThread.java<br />
@@ -93,43 +96,50 @@ function CodingProject() {
               &nbsp;&nbsp;|- Server.java<br />
             </p>
             <p>
-              Server and clients communicate by sending each other one of the two objects per conversation: 
-              User and Message. The server needs to start prior to the client for the communication to happen.
+              The server and clients communicate by exchanging two types of objects: 
+              <span className='text-codepiece'>User</span> and <span className='text-codepiece'>Message</span>.
             </p>
             <p>
-              The first time a client connects to the server, it sends a User object containing username and 
-              password for the server to verify. If it is a valid user, the server designates a socket for the client,
-              then starts a thread to keep the socket running, and finally stores the user-socket pair in the 
-              thread manager, so that to keep track of it. This server-side socket since awaits for 
-              any requests sent by the user through Message, such as "get online user list", "send message to another
-              user", "exit", and returns a Message or does some operations accordingly.
+              The first time a client connects to the server, it sends a <span className='text-codepiece'>User</span> object
+               containing username and 
+              password for the server to verify. If the credentials are valid, the server assigns a socket to 
+              the client, starts a dedicated thread to maintain the connection, and stores the user-socket pair
+              in the thread manager for tracking purposes.
             </p>
             <p>
-              On the other hand, when the client successfully connects to the server, it also opens a socket 
-              and starts a thread to keep it running, and then hands the thread to the thread manager (though in this project 
-              only one socket is needed, the manager is kept for possible extension). While the user could send 
-              any requests to the server with the main thread, this socket is kept for receiving Messages returned by
-              the server.
+              This server-side socket then listens for requests sent by the client through 
+              <span className='text-codepiece'>Message</span> objects, 
+              such as “get online user list”, “send message to another user”, and “exit”. The server responds 
+              by returning appropriate <span className='text-codepiece'>Message</span> objects or performing 
+              the required operations.
+            </p>
+            <p>
+              On the client side, once the connection is established, a socket is also opened and maintained by a 
+              dedicated thread. This thread is registered with the thread manager (although only one socket 
+              is required in this project, the manager is retained for future extensibility). While the main 
+              thread handles user input and sends requests, this socket thread is responsible for receiving 
+              messages from the server.
             </p>
             <h4>
-              Send messages to offline users
+              Store Messages For Offline Users
             </h4>
             <p>
-              If one or more message(s) are sent to an offline user, the server will detect the receiver
-              being offline and store the messages for it. This storing process is done by a designated class 
-              ManageStoredMessage, it keeps a ConcurrentHashMap with key being userId, and value being ArrayList
-              for Message. This structure makes it able to store multiple messages for any receiver.
-              Anytime a user logs in, which means connecting to the server, the server calles a function within
-              ManageStoredMessage, to deliver all stored messages for this user, if there is any.
+              When messages are sent to an offline user, the server detects that the recipient 
+              is unavailable and stores the messages for later delivery. This process is handled by a designated
+              class, <span className='text-codepiece'>ManageStoredMessage</span>, which maintains a ConcurrentHashMap where 
+              the key is the user ID and the value is an ArrayList of <span className='text-codepiece'>Message</span> objects.
+            </p>
+            <p>
+              This structure enables the system to store multiple messages for each offline user efficiently.
+              Whenever a user logs in and reconnects to the server, the server invokes a method 
+              in <span className='text-codepiece'>ManageStoredMessage</span> to deliver any stored messages to that user.
             </p>
           </div>
           <div className='img-wrapper'>
             <a href={project.images[0]} className='zoom-in' target='_blank' >
               <img src={project.images[0]}/>
             </a>
-            {/* <a href={project.images[1]} className='zoom-in' target='_blank' >
-              <img src={project.images[1]}/>
-            </a> */}
+            <p>Endpoints communicate through User and Message objects</p>
           </div>
         
         </div>
@@ -142,67 +152,97 @@ function CodingProject() {
               Structure Overview
             </h4>
             <p>
-              To make multiple NPCs(non-player character) move simultaneously, structure shown on the below picture 
-              is used. Starting from top to bottom of the hierarchy, the class Game is in charge of setting up parameters,
-              running the class Panel, and data load and save. 
-            </p>
-            <p>
-              Class Panel is the core of the game. It contains object instances of important classes, including the player,
-              three managers, and a clash monitor (which will appear in the next chapter). With every loop, 
-              it repaints the whole canvas to reflect the latest status 
-              of every object.
-            </p>
-            <p>
-              The three manager classes: EnemyTankManager, EnemyBulletManager, and MyBulletManager are used
-              to manage the individual subclasses like EnemyTank, Bullet, etc. The most advantage of using 
-              managers is increased readibility of the code, instead of having all the functions scattered in the 
-              class Panel, each manager is only responsible for one type of subclasses. 
-              All the managers register to listen from the game event system, which is composed of class EventBus,
-              interface Event, and interface EventListener, so that they get broadcasts of any 
-              game event from the system, and react to what matters to them respectively. 
-            </p>
-            <p>
-              Take an example to see how this works. In a loop of EnemyTankManager, if any enemy tank managed by it
-              is shot, the EnemyTankManager needs to 1) remove this dead tank, 2) talk to MyBulletManager
-              to let it remove the bullet that hit the tank. This communication process is dealt with through
-              the game event system. Upon the enemy tank being shot, the EnemyTankManager would post a event
-              called "EnemyTankIsShot", passing the relevant information along, like who is shot by which bullet. Then, 
-              every class that has registered to the game event system listens to this event, and see if it's relevant to them.
-              MyBulletManager has been told to listen to any event called "EnemyTankIsShot", so when it hears the news,
-              it processes the information along with the event, thus removes the bullet that hit the target.
-              EnemyTankManager, has also been told to listen to "EnemyTankIsShot". It did not react immediately after posting 
-              the event, but only when it hears the event posted by itself through the event system. So now that it hears the
-              event, it removes the poor dead enemy tank according to what it has been told.
-            </p>
-            <p>
-              Under the manager classes are the smallest units: EnemyTank and MyTank, inherited from class Tank, and class Bullet.
-              Since enemy tanks and my tank behave quite differently, they are two separate classes. However, all bullets behave the same,
-              so instead of having two classes for enemy bullets and my bullets, there is a boolean property in the class Bullet
-              to distinguish between them.
+              To enable multiple NPCs (non-player characters) to move simultaneously, the structure shown 
+              in the diagram below is used. From top to bottom in the hierarchy, 
+              the <span className='text-codepiece'>Game</span> class is responsible for setting parameters, 
+              launching the <span className='text-codepiece'>Panel</span> class, and handling data loading and saving.
             </p>
           </div>
           <div className='img-wrapper'>
             <a href={project.images[2]} className='zoom-in' target='_blank' >
               <img src={project.images[2]}/>
             </a>
+            <p>Diagram showing the structure of this project</p>
           </div>
           <div className='para-wrapper'>
+            <p>
+              The <span className='text-codepiece'>Panel</span> class is the core of the game. 
+              It contains instances of key components, including the player, three manager classes, and a 
+              collision monitor (introduced in the last section). During each game loop, it repaints the entire
+              canvas to reflect the latest state of all objects.
+            </p>
+            <p>
+              The three manager classes — <span className='text-codepiece'>EnemyTankManager</span>, 
+              <span className='text-codepiece'>EnemyBulletManager</span>, 
+              and <span className='text-codepiece'>MyBulletManager</span> — are responsible for managing 
+              their respective subclasses, such 
+              as <span className='text-codepiece'>EnemyTank</span> and <span className='text-codepiece'>Bullet</span>. 
+              The main advantage of using manager classes is improved code readability and maintainability. 
+              Instead of concentrating all logic within <span className='text-codepiece'>Panel</span>, each manager 
+              focuses on a specific type of object. 
+            </p>
+            <p>
+              All managers are registered with the game event system, which consists of 
+              the <span className='text-codepiece'>EventBus</span> class and 
+              the <span className='text-codepiece'>Event</span> and <span className='text-codepiece'>EventListener</span> interfaces. 
+              This system allows them to receive broadcasts of game events and respond only to relevant ones. 
+            </p>
+            <h4>
+              Event System Example
+            </h4>
+            <p>
+              The following example illustrates how the event system operates.
+            </p>
+            <p>
+              During a loop in <span className='text-codepiece'>EnemyTankManager</span>, if an enemy tank is hit,
+              the manager must:
+            </p>
+            <ol>
+              <li>Remove the destroyed tank</li>
+              <li>Notify <span className='text-codepiece'>MyBulletManager</span> to remove the bullet that 
+              caused the hit</li>
+            </ol>
+            <p>
+              This communication is handled through the event system. When a tank is 
+              shot, <span className='text-codepiece'>EnemyTankManager</span> posts an event 
+              named <span className='text-codepiece'>"EnemyTankIsShot"</span>, including relevant 
+              information such as which tank was hit and by which bullet.
+            </p>
+            <p>
+              All registered listeners receive this event and determine whether it applies to them. 
+              Since <span className='text-codepiece'>MyBulletManager</span> is configured to listen 
+              for <span className='text-codepiece'>"EnemyTankIsShot"</span>, it processes the event 
+              and removes the corresponding bullet.
+            </p>
+            <p>
+              <span className='text-codepiece'>EnemyTankManager</span> is also registered for this event.
+              Rather than acting immediately after posting it, the manager responds when it receives the 
+              event through the system, at which point it removes the destroyed enemy tank.
+            </p>
+            <p>
+              This design promotes loose coupling and improves modularity between system components.
+            </p>
             <h4>
               Multithreading Diagram
             </h4>
             <p>
-              The diagram was what I used during the development for debugging purpose. It
-              shows that when the game runs, there are 5 threads going on at the same time. In addition to
-              the old friends which are the three managers and the panel, there is also a thread clashMonitor running
-              to detect if any tank is shot. When a tank is shot, the event is again broadcasted through the event system,  
-              and ultimately goes to the relevant bulletManager and tankManager, requiring the bullet and the tank
-              involved to be removed.
+              The diagram was used during development for debugging purposes. It illustrates that five
+              threads run simultaneously during gameplay.
+            </p>
+            <p>
+              In addition to the three manager threads and the <span className='text-codepiece'>Panel</span> thread,
+              a <span className='text-codepiece'>ClashMonitor</span> thread continuously checks for 
+              collisions between tanks and bullets. When a collision is detected, an event is broadcast 
+              through the event system. This event is then handled by the 
+              relevant <span className='text-codepiece'>BulletManager</span> and <span className='text-codepiece'>TankManager</span>, 
+              which remove the corresponding bullet and tank from the game.
             </p>
           </div>
           <div className='img-wrapper'>
             <a href={project.images[3]} className='zoom-in' target='_blank' >
               <img src={project.images[3]}/>
             </a>
+            <p>Diagram showing all the running threads while the game is on</p>
           </div>
         </div>
       )}

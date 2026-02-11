@@ -2,7 +2,7 @@ import ShowcaseColumn from './ShowcaseColumn'
 
 function Showcase({allExperiences}) {
   return (
-    <div className='showcase' >
+    <div className='showcase resume-compo' >
       {allExperiences.map((ex) => (
         <ShowcaseColumn 
           key={ex.id}

@@ -21,15 +21,15 @@ const aboutmeData = [
   {
     id: 2,
     title:'WHY I HAVE LEARNT WHAT I LEARNT',
-    content:`My learning journey is closely connected to my interest in video games, 
-    which combine creativity and engineering. After graduating, I was honoured to work as a game designer. 
+    content:`My learning journey is closely connected to my interest in interactive applications like video games, 
+    which combines creativity and engineering. After graduating, I was honoured to work as a game designer. 
     During this role, I realised how valuable and engaging programming could be. Although I had some experience
     from my undergraduate studies, I felt a desire to deepen my skills, which led me to begin my self-study journey.`,
   }, 
   {
     id: 3,
     title:'IN THE ERA OF AI',
-    content: `I have witnessed the significant impact AI has had on the industry. However, there remains 
+    content: `I have seen the significant impact AI has had on the industry. However, there remains 
     a need for people with a good taste and a deep understanding of systems. One of the advantages of living in 
     this era is easier access to learning resources. AI provides quick start guides and makes solving problems 
     efficiently. I believe that the development of AI has made learning programming even more essential.`,
@@ -37,7 +37,7 @@ const aboutmeData = [
   {
     id: 5,
     title:'MY PERSONAL INTERESTS',
-    content: `Besides programming, I am a sports enthusiast. I have developed a workout routine that includes 
+    content: `I am a sports enthusiast. I have developed a workout routine that includes 
     flexibility, strength, coordination, and a bit of cardio with the help from my Pilates practice once a week. 
     In addition, I have been continuously improving my English since studying abroad in 2022, and it remains 
     one of my strongest interests.`,

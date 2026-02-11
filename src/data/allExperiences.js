@@ -2,7 +2,7 @@ const allExperiences = [
   // Use [n] to create new line in property description.
   {
     id: 1,
-    attr: 'Work',
+    attr: 'WORK',
     experiences: [
       {
         id: 1,
@@ -10,7 +10,8 @@ const allExperiences = [
         position: 'Shop Assistant (part-time)',
         company: 'Starlight Chinese Supermarket',
         location: 'Edinburgh, UK',
-        description: `Provide friendly customer service. [n]Update items and promotions information in the management system.`
+        description: `Provide friendly customer service. Assisted customers with checkout and inquiries. 
+        [n]Input information for new items and monitor price label mismatch, ensuring accurate and timely updates both online and in-store.`
       },
       {
         id: 2,
@@ -18,10 +19,10 @@ const allExperiences = [
         position: 'Game Designer',
         company: 'Lingxi Games, Alibaba Group',
         location: 'Guangzhou, CN',
-        description: `Designed a battle pass system and other features. Analysed over 480,000 player data entries to ensure balanced and fair difficulty curves for the battle pass system.
-        [n]Produced detailed, pseudocode-style documentations for every design to eliminate misunderstanding.
+        description: `Designed a battle pass system and other in-game features. Analysed over 480,000 player data entries to ensure balanced and fair difficulty curves for the battle pass system.
+        [n]Produced detailed, pseudocode-style documentations for every design to eliminate misunderstanding between developers.
         [n]Collaborated closely with programmers, UX designers, game testers to ensure smooth development and alignment with design documentation.
-        [n]Maintained and updated game data for every season. Automated data entry with customed formulas in Excel, reducing manual workload for all the designers.`
+        [n]Maintained and updated game data for every game season. Automated data entry with customed formulas in Excel, reducing manual workload for all the designers.`
       },
       {
         id: 3,
@@ -32,22 +33,13 @@ const allExperiences = [
         description: `Designed and implemented a game level with Unity.
         [n]Designed several minor features that were released in the game, including side gameplay and UI enhancements.`
       },
-      {
-        id: 4,
-        period: 'Jun 2020 - Jul 2021',
-        position: 'Freelance Illustrator',
-        company: '/',
-        location: 'Remote',
-        description: `Undertook some paid commisions including graduation souvenirs, large-sized illustrations 
-        for home decoration and wedding invitations.`
-      },
     ]
   }, 
   
   // Edu
   {
     id: 2,
-    attr: 'Education',
+    attr: 'EDUCATION',
     experiences: [
       {
         id: 1,
@@ -55,14 +47,10 @@ const allExperiences = [
         position: 'Programming',
         company: 'Self-study',
         location: '/',
-        description: `Learnt Java and web development (html + css + javascript & common frameworks, tools and libraries 
-        including Express.js, EJS, React, Next.js and Vite). `
-        // `I started learning programming after quitting game designer, 
-        // initially to understand how games run. However, with my interests growing stronger and the studies going deeper, 
-        // I ended up having learnt Java and full-stack web development (including html + css + js, common tools, libraries 
-        // and frameworks like Express, EJS, React, Next.js and Vite). 
-        // I have developed this website, a multithreaded game an instant messaging system, and a database-driven website 
-        // implementing CRUD operations till now, and will do more in the future.,`
+        description: `Developed strong proficiency in Java and full-stack web development, 
+        including HTML, CSS, and JavaScript, as well as modern frameworks and tools such as Express, 
+        EJS, React, Next.js, and Vite. [n]Built multiple projects applying concepts in networking, 
+        multithreading, database management, and event-driven systems. `
       },
       {
         id: 2,

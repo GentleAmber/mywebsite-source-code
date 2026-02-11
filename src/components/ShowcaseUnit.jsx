@@ -7,7 +7,7 @@ function ShowcaseUnit({experience}) {
 
   return (
     <div className='showcase-unit'>
-      <div className='showcase-unit-title'>
+      <div className='showcase-unit-title text-codeblock'>
         <span>{experience.period}</span>
         <span>{experience.company}</span>
         <span>{experience.position}</span>

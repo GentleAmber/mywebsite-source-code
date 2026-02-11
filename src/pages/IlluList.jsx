@@ -20,12 +20,12 @@ function IlluList() {
         <div className="textbox">
           <h1></h1>
           <p>
-            I started learning art at the age of 10. I have been doing it on and off but it is always with me there. 
-            I don't have a uniform "style" which I now see as a good thing. 
+            I started learning art at the age of 10 and have pursued it on and off, but it is always with me. 
+            I don't have a single, uniform "style", which I now see as a strength. 
           </p>
           <p>
-            My projects feature a wide range of subjests. Some are comic stories, while some are just simple
-            cute chat stickers for everyone to use. Most of them are created with digital device.
+            My projects cover a wide range of subjests. Some are comic stories, while some are just simple
+            cute chat stickers for everyday use. Most of my works are created with digital tools.
           </p>
         </div>
         

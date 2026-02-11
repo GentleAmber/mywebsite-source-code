@@ -9,7 +9,7 @@ function Timeline() {
           <div className="content">
             <h2>2025</h2>
             <p>
-              Left Lingxi Games and relocated to Edinburgh.
+              Left Lingxi Games, Alibaba and relocated to Edinburgh.
             </p>
             <p>
               Started learning programming.
@@ -35,15 +35,7 @@ function Timeline() {
             </p>
           </div>
         </div>
-        <div className="container right">
-          <div className="content">
-            <h2>2018</h2>
-            <p>
-              Started learning digital drawing.
-            </p>
-          </div>
-        </div>
-      </div> 
+      </div>
     </div>
   )
 }
