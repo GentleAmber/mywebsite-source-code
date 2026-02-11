@@ -173,10 +173,10 @@ body.dark {
 }
 .elementor-section {
   position: relative;
-  background-color: #eca5e3;
+  background: linear-gradient(110deg, #edc798, #eda7d0);
 }
 .dark .elementor-section {
-  background-color: #923275;
+  background: linear-gradient(40deg, #444188, #b474bd);
 }
 .elementor-shape {
   direction: ltr;
@@ -281,7 +281,7 @@ body.dark {
 }
 /* Place the container to the left */
 .timeline .left {
-  left: -7.7%;
+  left: 0;
 }
 /* Place the container to the right */
 .timeline .right {
@@ -326,16 +326,12 @@ body.dark {
   border-radius: 6px;
   border: solid 2px var(--color-foreground);
 }
-.timeline .right .content {
+.timeline .content {
   box-shadow: 8px 8px 3px var(--color-box-shadow);
-}
-.timeline .left .content {
-  box-shadow: -8px 8px 3px var(--color-box-shadow);
 }
 
 /* Responsive timeline on smaller screens */
-@media screen and (max-width: 74rem) {
-  .timeline .left .content {
+.timeline .left .content {
     box-shadow: 8px 8px 3px var(--color-box-shadow);
   }
   .timeline {
@@ -366,6 +362,8 @@ body.dark {
   .timeline .right, .timeline .left {
     left: 0%;
   }
+@media screen and (max-width: 74rem) {
+  
 
   #profile {
     width: 9rem;
@@ -412,9 +410,9 @@ body.dark {
   width: 90%;
 }
 .illu.thumb {
-  width: 70%;
+  width: 500px;
   padding: 40px;
-  height: 450px;
+  height: 420px;
   transition: 0.1s;
   background-color: var(--color-foreground);
 }
@@ -747,7 +745,7 @@ body:not(.dark) .illu-project-images img{
   flex-direction: column;
   row-gap: 0.5rem;
   box-sizing: border-box;
-  width: 100%;
+  width: 65%;
 }
 
 .coding-project .return {
@@ -796,6 +794,7 @@ body:not(.dark) .illu-project-images img{
 @media screen and (max-width: 62rem) {
   .coding-project {
     padding: 1.1rem 10px;
+    width: 100%;
   }
   .text-codeblock {
     padding: 10px;
@@ -824,7 +823,7 @@ body:not(.dark) .illu-project-images img{
 }
 }
 .resume-content {
-  width: 85%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -848,6 +847,9 @@ body:not(.dark) .illu-project-images img{
   padding: 0 1%;
   align-items: center;
   
+}
+.showcase-column {
+  width: 100%;
 }
 .showcase-column > ul {
   margin: var(--gap-content-to-title) 0 0 0;

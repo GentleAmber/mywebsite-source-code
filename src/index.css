@@ -79,7 +79,7 @@ footer {
 body {
   --color-foreground: #251a38;
   --color-background: rgb(245, 242, 235);
-  --color-artistic: #ee2a9c;
+  --color-artistic: #e96ab4;
   --color-border: rgb(32, 32, 32);
   --color-hover-background: #bfbec2;
 
@@ -93,7 +93,7 @@ body {
 body.dark {
   --color-background: #242424;
   --color-foreground: rgb(234, 250, 255);
-  --color-artistic: #db3bab;
+  --color-artistic: #c97ed4;
   --color-border: rgb(105, 104, 104);
   --color-hover-background: #5c5c5e;
 
