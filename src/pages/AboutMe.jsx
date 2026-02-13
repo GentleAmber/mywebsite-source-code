@@ -1,4 +1,4 @@
-import profileUrl from './../assets/profile.jpeg'
+import profileUrl from './../assets/profile.jpg'
 import Timeline from './../components/Timeline'
 import AboutMeCard from './../components/AboutMeCard'
 import cardData from './../data/aboutmeCardData'

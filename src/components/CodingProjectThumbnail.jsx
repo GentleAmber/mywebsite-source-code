@@ -17,13 +17,13 @@ function CodingProjectThumbnail({ dir=0, slug, title, images, cate, skills, tech
           </div>
           <div className='tags'>
             <div className='cate tag'>
-              {cate.map((c, index) => <span key={index}>{c}</span>)}
+              {cate.map((c, index) => <div key={index}>{c}</div>)}
             </div>
             <div className='skills tag'>
-              {skills.map((s, index) => <span key={index}>{s}</span>)}
+              {skills.map((s, index) => <div key={index}>{s}</div>)}
             </div>
             <div className='tech-stack tag'>
-              {techStack.map((t, index) => <span key={index}>{t}</span>)}
+              {techStack.map((t, index) => <div key={index}>{t}</div>)}
             </div>
           </div>
           <div className='thumb-des'>
