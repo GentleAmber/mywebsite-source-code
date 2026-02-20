@@ -8,9 +8,16 @@ function CodingProject() {
   return (
     <div className='coding-project'>
       <div className='repository'>
+        { project.liveApp ? 
+          <a href={project.liveApp} target="_blank">
+          <CiLink /><span> Live App</span>
+        </a> :  null
+        }
+
         <a href={project.link} target="_blank">
           <CiLink /><span> Github repository</span>
         </a>
+        
       </div>
       {project.id === 1 && (
         <div id={project.slug} className='project-wrapper'>
@@ -38,16 +45,10 @@ function CodingProject() {
               Introduction
             </h4>
             <p>
-              This is a small entertaining project in which I practiced integrating public API with my own application 
-              and parsing request queries. Lots of efforts were devoted to tuning up the API, such as filtering out
-              artworks without image data and carefully constructing search keywords to return the most 
-              relevant results. 
+              This is a small entertaining project in which I practised integrating public API with my own application and parsing request queries. A lot of effort was devoted to tuning up the API, such as filtering out artworks without image data.
             </p>
             <p>
-              Many result objects returned by the API have incomplete information. 
-              Some are missing titles, some authors, and others lack images. For this project, 
-              I choose to assign default values to any missing fields while still displaying all results. 
-              In a more formal environment, objects without image would be excluded.
+              This project implements basic security measures, including rate limiting and input processing, and a cache map which stores queried results to improve performance.
             </p>
           </div>
           <div className='img-wrapper'>
@@ -60,7 +61,7 @@ function CodingProject() {
             <a href={project.images[1]} className='zoom-in' target='_blank' >
               <img src={project.images[1]}/>
             </a>
-            <p>Search results of artist "Van Goah"</p>
+            <p>Search results of artist "Van Gogh"</p>
           </div>
         
         </div>

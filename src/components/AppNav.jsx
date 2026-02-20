@@ -46,7 +46,7 @@ function AppNav() {
         <div className='app-subnav'>
           <NavLink to='coding' className='app-navlink'>Coding</NavLink>
           <NavLink to='illustrations' className='app-navlink'>Illustrations</NavLink>
-          <NavLink to='resume' className='app-navlink'>Resume</NavLink>
+          <NavLink to='resume' className='app-navlink'>Résumé</NavLink>
           <DarkModeToggle isDark={isDark} setIsDark={setIsDark}/>
         </div>
       }

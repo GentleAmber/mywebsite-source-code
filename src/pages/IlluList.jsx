@@ -25,7 +25,7 @@ function IlluList() {
           </p>
           <p>
             My projects cover a wide range of subjests. Some are comic stories, while some are just simple
-            cute chat stickers for everyday use. Most of my works are created with digital tools.
+            cute chat stickers for everyday use. Most of my work is created with digital tools.
           </p>
         </div>
         

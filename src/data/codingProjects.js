@@ -44,7 +44,7 @@ const projects = [
     thumbnailDes: "A website featuring random artwork display and a search function to find artworks based on specific criteria. The Metropolitan Museum of Art's public API is used to retrieve the data.",
     images: [indexArt, searchArt],
     link: 'https://github.com/GentleAmber/Art-of-the-day',
-
+    liveApp: 'https://art-of-the-day.onrender.com/',
   },
   {
     id: 3,

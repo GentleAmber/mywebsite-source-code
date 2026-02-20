@@ -10,7 +10,7 @@ const allExperiences = [
         position: 'Shop Assistant (part-time)',
         company: 'Starlight Chinese Supermarket',
         location: 'Edinburgh, UK',
-        description: `Provide friendly customer service. Assisted customers with checkout and inquiries. 
+        description: `Provide friendly customer service. Assist customers with checkout and inquiries. 
         [n]Input information for new items and monitor price label mismatch, ensuring accurate and timely updates both online and in-store.`
       },
       {

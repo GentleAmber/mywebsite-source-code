@@ -1,7 +1,9 @@
 import profileUrl from './../assets/profile.jpg'
 import Timeline from './../components/Timeline'
 import AboutMeCard from './../components/AboutMeCard'
+import LiveApps from './../components/LiveApps'
 import cardData from './../data/aboutmeCardData'
+import codingProjects from './../data/codingProjects'
 import { FaLinkedinIn } from "react-icons/fa"
 import { FaEnvelope } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
@@ -19,9 +21,18 @@ function AboutMe() {
           I do <span className='text-highlight'>Full-stack web development</span>.
         </h2>
       </div>
-      
+
+      <h2 className='section-heading'>
+        MILESTONES
+      </h2>
       <Timeline />
+
       <AboutMeCard aboutmeData={cardData} />
+
+      <h2 className='section-heading project-heading'>
+        LIVE APPS
+      </h2>
+      <LiveApps codingProjects={codingProjects}/>
 
       <div className='pre-footer aboutme'>
         <div id='summary'>

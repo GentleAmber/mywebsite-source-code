@@ -4,11 +4,10 @@ const aboutmeData = [
   {
     id: 4,
     title: 'WHAT I DO',
-    content: `I specialise in full-stack web development. I build personal websites like the one you’re viewing,
+    content: `I am experienced in full-stack web development. I build personal websites like the one you’re viewing,
     as well as platforms with user systems and databases. I am proficient in Java, HTML, CSS, and JavaScript,
-    and experienced with common frameworks and libraries such as Express, EJS, Next.js, Vite, and React. 
-    In addition to practical development skills, I have studied fundamental concepts including computer 
-    architecture and networking, which I believe are the most important.`,
+    experienced with common frameworks and libraries such as Express, EJS, Next.js, Vite, and React, with 
+    hands-on experience in PostgreSQL and MySQL for database management.`,
   },
   // {
   //   id: 1,
@@ -30,9 +29,9 @@ const aboutmeData = [
     id: 3,
     title:'IN THE ERA OF AI',
     content: `I have seen the significant impact AI has had on the industry. However, there remains 
-    a need for people with a good taste and a deep understanding of systems. One of the advantages of living in 
-    this era is easier access to learning resources. AI provides quick start guides and makes solving problems 
-    efficiently. I believe that the development of AI has made learning programming even more essential.`,
+    a need for people with good taste and deep understanding of systems. One of the advantages of living in 
+    this era is easier access to learning resources. I believe that the development of AI has made 
+    learning programming even more essential.`,
   },
   {
     id: 5,
