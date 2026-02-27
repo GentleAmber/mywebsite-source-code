@@ -19,11 +19,13 @@ const aboutmeData = [
   // }, 
   {
     id: 2,
-    title:'WHY I HAVE LEARNT WHAT I LEARNT',
+    title:'LEARNING',
     content:`My learning journey is closely connected to my interest in interactive applications like video games, 
     which combines creativity and engineering. After graduating, I was honoured to work as a game designer. 
-    During this role, I realised how valuable and engaging programming could be. Although I had some experience
-    from my undergraduate studies, I felt a desire to deepen my skills, which led me to begin my self-study journey.`,
+    During this role, I realised how valuable and engaging programming could be, which led me to begin my self-study journey.
+    Because I always want to find out "why" and "how", I have studied not only programming languages themselves but also core 
+    Computer Science subjects such as Computer Architecture, Networking, and a crash course in AI. I will continue to
+    deepen my knowledge of the basics.`,
   }, 
   {
     id: 3,

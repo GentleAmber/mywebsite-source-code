@@ -81,6 +81,7 @@ body {
   --color-background: rgb(245, 242, 235);
   --color-artistic: #e96ab4;
   --color-border: rgb(32, 32, 32);
+  --color-lighter-border: rgb(94, 94, 94);
   --color-hover-background: #bfbec2;
 
   margin: 0;
@@ -95,6 +96,7 @@ body.dark {
   --color-foreground: rgb(234, 250, 255);
   --color-artistic: #c97ed4;
   --color-border: rgb(105, 104, 104);
+  --color-lighter-border: rgb(68, 67, 67);
   --color-hover-background: #5c5c5e;
 
   color-scheme: dark;
