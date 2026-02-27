@@ -741,7 +741,6 @@ body.dark {
   padding: 2rem 60px;
   border: solid var(--border-width-container) var(--color-border);
   border-top: solid calc(var(--border-width-container) * 2 / 3) var(--color-lighter-border);
-  
 }
 .coding.thumb h2 {
   color: var(--color-foreground);
